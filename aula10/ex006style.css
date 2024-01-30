@@ -1,0 +1,10 @@
+#area {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-family: sans-serif;
+}

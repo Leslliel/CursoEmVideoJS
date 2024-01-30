@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container {
+            padding: 5.6vw;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        body {
+            font-size: 18pt;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        input {
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 100px;
+        }
+
+        #button-somar{
+            padding: 5px 18px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Somando valores</h1>
+        <div>
+            <input type="number" id="number1">
+            <span>+</span>
+            <input type="number" id="number2">
+        </div>
+        <button id="button-somar">Somar</button>
+        <div id="res"></div>
+    </div>
+
+    <script>
+        const botaoSomar = document.getElementById('button-somar')
+        botaoSomar.addEventListener('click', function() {
+            var tn1 = document.getElementById('number1')
+            var tn2 = document.getElementById('number2')
+            var res = document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é ${s}`
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <link rel="stylesheet" href="ex006style.css">
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        const area = document.getElementById('area')
+        
+        // area.addEventListener('click', clicar)
+
+        // function clicar() {
+        //     area.innerText = 'Clicou!'
+        // }
+
+        // area.addEventListener('click', function() {
+        //     area.innerText = 'Clicou!'
+        // })
+
+        area.addEventListener('mouseenter', function() {
+            area.innerText = 'Entrou!'
+        })
+
+        area.addEventListener('mouseout', function() {
+            area.innerText = 'Saiu!'
+        })
+
+        area.addEventListener('mouseup', function() {
+            area.innerText = 'parou de pressionar'
+        })
+
+        area.addEventListener('mousedown', function() {
+            area.innerText = 'pressionando'
+        })
+    </script>
+</body>
+</html>

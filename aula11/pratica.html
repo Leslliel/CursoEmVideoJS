@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica ex009</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            font-size: 15pt;
+            background-color: rgb(253, 241, 255);
+        }
+
+        input {
+            margin: 20px 0;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            padding: 5.6vw;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        button {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 10px;
+            padding: 6px;
+            border-radius: 5px;
+            border: none;
+            background-color: green;
+            color: white;
+        }
+
+        div p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Verificação de nacionalidade</h1>
+        <label for="nacionalidade">Nacionalidade: </label>
+        <input id="nacionalidade" type="text">
+        <button id="button-verificar">Enviar</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        var button = document.getElementById('button-verificar')
+        
+        button.addEventListener('click', function() {
+            var nacio = document.getElementById('nacionalidade').value
+            var resultado = document.getElementById('resultado')
+            resultado.innerHTML = `<p>Nascido em <strong>${nacio}</strong></p>`
+
+            if(nacio.toUpperCase() == 'BRASIL'){
+                resultado.innerHTML += '<p>Você é Brasileiro</p>'
+            }else {
+                resultado.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+        })
+    </script>
+</body>
+</html>
